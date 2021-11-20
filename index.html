@@ -26,20 +26,31 @@
 
             <div class="field field1">
                 <label class="field__label" for="input-transfer-content">Nội dung: </label>
-                <input class="field__control field__amout__content" type="text" id="input-transfer-content">
+                <input class="field__control field__amout__content" type="text" id="input-transfer-content"
+                    name='content'>
             </div>
 
             <div class="field">
                 <div class="field1">
                     <label class="field__label" for="input-transfer-amount">Số tiền: </label>
-                    <input class="field__control field__amout__content" pattern="[0-9]*" type="text" id="input-transfer-amount">
+                    <input class="field__control field__amout__content" pattern="[0-9]*" type="number"
+                        id="input-transfer-amount" name='amount'>
                 </div>
             </div>
             <div class="field" style="display: none;">
                 <button class="field__submit" type="submit">Tạo mã</button>
             </div>
+
+            <button class="field__submit" type="submit"
+                style="background-color: none;height: 30px;border-radius: 10px;width: 100%;margin: auto;background: none; border: none;">
+                <div
+                    style="background-color: black;height: 3px;border-radius: 10px;width: 50%;margin: auto;margin-top: 26px;">
+                </div>
+
+            </button>
+
         </form>
-        <div style="background-color: black;height: 3px;border-radius: 10px;width: 50%;margin: auto;margin-top: 26px;"></div>
+
         <section class="banks">
             <ul>
                 <li>

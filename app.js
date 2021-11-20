@@ -1,9 +1,3 @@
-if(/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream)
-{
-    var inputs = document.querySelectorAll('input[type="number"]');
-    for(var i = inputs.length; i--;)
-        inputs[i].setAttribute('pattern', '\\d*');
-}
 let form = document.getElementById("form-qr");
 form.addEventListener("keydown", (event) => {
     let key = event.key;
