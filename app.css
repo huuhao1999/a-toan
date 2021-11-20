@@ -1,0 +1,253 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+.container-parent{
+  max-width: 450px;
+  margin: 0 auto;
+}
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  min-height: 100vh;
+  padding: 0 0.5em;
+  background-color: #fade70;
+  max-width: 40em;
+  margin: auto auto;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: Cabin;
+  src: url("fonts/Cabin.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Baloo;
+  src: url("fonts/Baloo.ttf") format("truetype");
+}
+
+.flow > * + * {
+  margin-top: 0.75rem;
+}
+
+.header {
+  margin-top: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  width: 95%;
+}
+
+.brand {
+  text-transform: uppercase;
+}
+
+.field {
+  display: flex;
+  margin-top: 0.5em;
+  text-align: center;
+}
+
+.qr-form {
+  padding: 0 2em;
+}
+
+.field__label {
+  font-family: Cabin;
+  font-size: 1.775rem;
+
+  /* text-align: right;  */
+}
+.field1{
+  display: table-cell;
+  vertical-align: middle;
+  height: 50px;
+}
+.field__control {
+   width: 45%;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  font-size: 1.775rem;
+  font-family: Baloo;
+  /* text-align: center; */
+}
+.field__control1 {
+  width: 44%;
+ border: 0;
+ outline: 0;
+ background-color: transparent;
+ font-size: 1.775rem;
+ font-family: Baloo;
+ /* text-align: center; */
+}
+.field__amout__content{
+  /* text-align: left;
+  margin-left: 20px; */
+}
+
+.field__control1[readonly] {
+  font-family: Cabin;
+}
+
+.banks {
+  padding: 0em 0em 0em 1.6em;
+  font-family: Baloo;
+  
+  font-size: 32px;
+}
+
+.banks li {
+  word-spacing: 10px;
+  margin-top: 0.9em;
+}
+
+.banks li > div {
+  display: flex;
+}
+
+.banks .bank-name {
+  width: 40%;
+  padding-right: 1em;
+}
+
+.banks .bank-number {
+  width: 60%;
+}
+
+.qr {
+  display: grid;
+  grid-template: "brand info" auto "image info" auto / 1fr 2fr;
+}
+
+.qr .qr-brand {
+  grid-area: brand;
+}
+
+.qr .qr-image {
+  grid-area: image;
+}
+
+.qr .qr-info {
+  grid-area: info;
+}
+
+.qr .qr-info {
+  margin-left: 1.4em;
+  font-family: Cabin;
+}
+
+.qr .qr-brand {
+  margin-left: 0.5em;
+  max-height: 2em;
+}
+
+.qr .qr-image {
+ 
+  display: block;
+}
+.info-temp_hao {
+  max-width: 250px;
+  text-align: justify;
+  font-size: 17px;
+  margin-top: 10px;
+}
+/*# sourceMappingURL=app.css.map */
+
+@media screen and (max-width: 445px) {
+  .banks {
+    font-size: 28px;
+  }
+  .info-temp_hao {
+    font-size: 16px;
+  }
+  .field__control {
+    width: 55%;
+ }
+ .field__control1 {
+   width: 57%;
+ }
+}
+
+@media screen and (max-width: 360px) {
+  .banks {
+    font-size: 23px;
+  }
+  .info-temp_hao {
+    font-size: 14px;
+  }
+}
