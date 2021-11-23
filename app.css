@@ -170,6 +170,12 @@ ul {
   
   font-size: 32px;
 }
+.banks1 {
+  padding: 0em 0em 0em 1.6em;
+  font-family: Baloo;
+  font-size: 32px;
+  
+}
 
 .banks li {
   word-spacing: 10px;
@@ -229,7 +235,7 @@ ul {
 /*# sourceMappingURL=app.css.map */
 
 @media screen and (max-width: 445px) {
-  .banks {
+  .banks , .banks1{
     font-size: 28px;
   }
   .info-temp_hao {
@@ -244,10 +250,43 @@ ul {
 }
 
 @media screen and (max-width: 360px) {
-  .banks {
+  .banks, .banks1 {
     font-size: 23px;
   }
   .info-temp_hao {
     font-size: 14px;
   }
+  .field__label{
+    font-size: 1.5rem;
+  }
+  .field__control {
+
+   font-size: 1.5rem;
+
+   /* text-align: center; */
+ }
+ .field__control1 {
+  font-size: 1.5rem;
+ }
+}
+
+@media screen and (max-width: 330px) {
+  .banks, .banks1 {
+    font-size: 20px;
+  }
+  .info-temp_hao {
+    font-size: 12px;
+  }
+  .field__label{
+    font-size: 1.2rem;
+  }
+  .field__control {
+
+   font-size: 1.2rem;
+
+   /* text-align: center; */
+ }
+ .field__control1 {
+  font-size: 1.2rem;
+ }
 }

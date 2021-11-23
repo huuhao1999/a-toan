@@ -77,11 +77,8 @@
         <section class="qr" style="margin-top: 27px">
             <ul class="banks1">
                 <li>
-                    <div>
-
-                        <img class="qr-brand" src="img/vietqr.png" alt="vietqr" style="margin-left: -4px;    margin-left: -1px !important;margin-top: 4px;">
-                    </div>
-                   
+                    <dt class="bank-name" style="    height: 35px;">VIETQR</dt>
+                    
                 </li>
             </ul>
             <img class="qr-image" id="qr-image" src="img/qr.svg" alt="qr image">
