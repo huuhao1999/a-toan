@@ -66,12 +66,7 @@ function formatCurrency(input, blur) {
     // add commas to number
     // remove all non-digits
     input_val = formatNumber(input_val);
-    input_val = "$" + input_val;
-    
-    // final formatting
-    if (blur === "blur") {
-      input_val += ".00";
-    }
+    input_val = input_val+"đ";
   }
   
   // send updated string to input
@@ -94,31 +89,34 @@ let form = document.getElementById("form-qr");
 form.addEventListener("keydown", (event) => {
     let key = event.key;
     if (key == "Enter") {
-        console.log('scsdcd');
+     
         let activeElm = document.activeElement;
-        let content = document.getElementById("input-transfer-content");
-        let amount = document.getElementById("input-transfer-amount");
+        let content = document.getElementById("input-transfer-content").value;
+        let amount = document.getElementById("input-transfer-amount").value;
+        console.log(amount);
         if (amount) {
             amount = Number((amount.toString()).replace('đ', '').split(',').join(''));
         }
+        console.log(amount);
+       
         if (activeElm == content && content.value != "" && amount.value == "") {
             amount.focus();
             event.preventDefault();
         }
     }
 });
-document.getElementById("input-transfer-amount").onblur = function (event) {
-    if (!event?.relatedTarget?.id) {
-        if (this.value) {
-            this.type = 'text';
-            this.value = parseFloat(this.value.replace(/,/g, ""))
-                .toFixed(0)
-                .toString()
-                .replace(/\B(?=(\d{3})+(?!\d))/g, ",") + 'đ';
-        }
-    }
+// document.getElementById("input-transfer-amount").onblur = function (event) {
+//     if (!event?.relatedTarget?.id) {
+//         if (this.value) {
+//             this.type = 'text';
+//             this.value = parseFloat(this.value.replace(/,/g, ""))
+//                 .toFixed(0)
+//                 .toString()
+//                 .replace(/\B(?=(\d{3})+(?!\d))/g, ",") + 'đ';
+//         }
+//     }
 
-}
+// }
 form.addEventListener("submit", (event) => {
     console.log('vo nhanh 2');
     event.preventDefault();
@@ -136,21 +134,11 @@ form.addEventListener("submit", (event) => {
         console.log(imageUrl);
         img.src = imageUrl;
     }
-    document.getElementById("input-transfer-amount").type = 'text';
-    if (amount) {
-        document.getElementById("input-transfer-amount").type='text';
-        document.getElementById("input-transfer-amount").value = parseFloat(amount.toString().replace(/,/g, ""))
-            .toFixed(0)
-            .toString()
-            .replace(/\B(?=(\d{3})+(?!\d))/g, ",") + 'đ';
-            document.getElementById("input-transfer-amount").pattern = "*";
-
-    }
 });
 
 
-document.getElementById("input-transfer-amount").onclick = function () {
-    this.value = Number((this.value).replace('đ', '').split(',').join(''));
-    this.type = 'number';
-    // console.log('csdcsdcsd');
-}
+// document.getElementById("input-transfer-amount").onclick = function () {
+//     this.value = Number((this.value).replace('đ', '').split(',').join(''));
+//     this.type = 'number';
+//     // console.log('csdcsdcsd');
+// }
