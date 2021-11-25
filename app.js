@@ -93,6 +93,7 @@ form.addEventListener("keydown", (event) => {
         let activeElm = document.activeElement;
         let content = document.getElementById("input-transfer-content").value;
         let amount = document.getElementById("input-transfer-amount").value;
+        document.getElementById("input-transfer-amount").pattern = "*";
         console.log(amount);
         if (amount) {
             amount = Number((amount.toString()).replace('đ', '').split(',').join(''));
@@ -133,10 +134,26 @@ form.addEventListener("submit", (event) => {
         let imageUrl = `https://api.huuhao.club/${bankName}/${bankNumber}/${amount}/${encodeURI(content)}/qr_only_beck-company.png?accountName=${encodeURI(accountName)}`;
         console.log(imageUrl);
         img.src = imageUrl;
+        document.getElementById("input-transfer-amount").pattern = "^\$\d{1,3}(,\d{3})*(\.\d+)?$";
     }
 });
 
 
+document.getElementById("field__submit").onclick = function (event) {
+    let content = document.getElementById("input-transfer-content").value;
+    let amount = document.getElementById("input-transfer-amount").value;
+    document.getElementById("input-transfer-amount").pattern = "*";
+    console.log(amount);
+    if (amount) {
+        amount = Number((amount.toString()).replace('đ', '').split(',').join(''));
+    }
+    console.log(amount);
+   
+    if ( content.value != "" && amount.value == "") {
+        amount.focus();
+        event.preventDefault();
+    }
+}
 // document.getElementById("input-transfer-amount").onclick = function () {
 //     this.value = Number((this.value).replace('đ', '').split(',').join(''));
 //     this.type = 'number';
