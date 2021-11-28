@@ -34,8 +34,10 @@
             <div class="field">
                 <div class="field1">
                     <label class="field__label" for="input-transfer-amount">Số tiền: </label>
-                    <input class="field__control field__amout__content" type="text" data-type="currency"
-                        id="input-transfer-amount" name='amount' placeholder="0đ">
+                    <input class="field__control field__amout__content" pattern="[0-9]*" type="number"
+                  id="input-transfer-amount" name='amount' placeholder="0đ">
+                    <input style="display: none;" class="field__control field__amout__content" type="text" 
+                        id="input-transfer-amount1" name='amount1' placeholder="0đ">
                 </div>
             </div>
             <!-- <input type="text" name="currency-field" id="currency-field" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" value=""  > -->
@@ -80,9 +82,9 @@
             <ul class="banks1">
                 <li>
                     <div>
-                      VIETQR
+                        VIETQR
                     </div>
-                   
+
                 </li>
             </ul>
             <img class="qr-image" id="qr-image" src="img/qr.svg" alt="qr image">

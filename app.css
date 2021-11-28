@@ -269,7 +269,9 @@ ul {
   font-size: 1.5rem;
  }
 }
-
+#input-transfer-amount-label{
+  margin-left: 20px;
+}
 @media screen and (max-width: 330px) {
   .banks, .banks1 {
     font-size: 20px;
