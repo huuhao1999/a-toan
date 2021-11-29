@@ -144,7 +144,7 @@ form.addEventListener("submit", (event) => {
   }
   if (content != "" && amount != "") {
     let img = document.getElementById("qr-image");
-    let imageUrl = `http://localhost:4000/${bankName}/${bankNumber}/${amount}/${encodeURI(content)}/theme-beckObbRt.png?accountName=${encodeURI(accountName)}`;
+    let imageUrl = `https://api.vietqr.io/${bankName}/${bankNumber}/${amount}/${encodeURI(content)}/theme-beckObbRt.png?accountName=${encodeURI(accountName)}`;
     console.log(imageUrl);
     img.src = imageUrl;
     document.getElementById("input-transfer-amount").pattern = "^\$\d{1,3}(,\d{3})*(\.\d+)?$";
