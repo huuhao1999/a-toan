@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
-    <title>Beck sport</title>
+    <title>SOCCER BECK</title>
     <link rel="stylesheet" href="app.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta http-equiv='cache-control' content='no-cache'>
+    <meta http-equiv='expires' content='0'>
+    <meta http-equiv='pragma' content='no-cache'>
 </head>
-
 <body class="flow">
     <div class="container-parent">
         <section class="header">
-            <img class="logo" src="img/logo.png" alt="beck sport">
+            <img class="logo" src="img/logo.jpg" alt="SOCCER BECK">
+            <!-- <img class="logo" src="img/ex.jpg" alt="beck sport"> -->
         </section>
-
         <form class="qr-form" id="form-qr" style="word-spacing: 5px;">
-            <div class="field" style="margin-bottom: 5px;">
+            <div class="field" style="margin-bottom: 5px;line-height: 0;">
                 <div>
                     <label class="field__label" for="input-account-name">Chủ TK: </label>
-                    <input class="field__control1" type="text" id="input-account-name" value="Vũ Đình Toàn" readonly>
+                    <input class="field__control1" type="text" id="input-account-name" value="VŨ ĐÌNH TOÀN" readonly>
                 </div>
             </div>
-
             <div class="field field1">
                 <label class="field__label" for="input-transfer-content">Nội dung: </label>
                 <input class="field__control field__amout__content" type="text" id="input-transfer-content"
@@ -35,8 +35,8 @@
                 <div class="field1">
                     <label class="field__label" for="input-transfer-amount">Số tiền: </label>
                     <input class="field__control field__amout__content" pattern="[0-9]*" type="number"
-                  id="input-transfer-amount" name='amount' placeholder="0đ" value="0">
-                    <input style="display: none;" class="field__control field__amout__content" type="text" 
+                        id="input-transfer-amount" name='amount' placeholder="0đ" value="0">
+                    <input style="display: none;" class="field__control field__amout__content" type="text"
                         id="input-transfer-amount1" name='amount1' placeholder="0đ">
                 </div>
             </div>
@@ -46,58 +46,56 @@
                 <div
                     style="background-color: black;height: 3px;border-radius: 10px;width: 50%;margin: auto;margin-top: 26px;">
                 </div>
-
             </button>
-
         </form>
-
         <section class="banks">
             <ul>
                 <li>
                     <div>
-                        <dt class="bank-name">VIETCOM</dt>
+                        <dt class="bank-name">1. VIETCOM</dt>
                         <dd class="bank-number" style="text-decoration: none !important; color: black !important;">1111
                             51 41 31</dd>
                     </div>
                 </li>
                 <li>
                     <div>
-                        <dt class="bank-name">MBBANK</dt>
+                        <dt class="bank-name">2. MBBANK</dt>
                         <dd class="bank-number" style="text-decoration: none !important; color: black !important;">1111
                             51 41 31</dd>
                     </div>
                 </li>
                 <li>
                     <div>
-                        <dt class="bank-name">VPBANK</dt>
+                        <dt class="bank-name">3. VPBANK</dt>
                         <p class="bank-number" style="text-decoration: none !important; color: black !important;">1111
                             51 41 31</p>
                     </div>
-
+                    <div class="note-inner">
+                        <div class="note">Vui lòng để nội dung chuyển khoản và số tiền đúng</div><br>
+                        <div class="note">theo MÃ ĐH để thanh toán được tự động ghi nhận.</div>
+                    </div>
                 </li>
-            </ul>
-        </section>
-
-        <section class="qr" style="margin-top: 27px">
-            <ul class="banks1">
                 <li>
                     <div>
-                        VIETQR
+                        <dt class="bank-name">4. VIETQR</dt>
+                        <p></p>
                     </div>
-
+                    <div style="align-items: center;">
+                        <dt style="width: 50%;"><img class="qr-image" id="qr-image" src="img/qr.svg" alt="qr image">
+                        </dt>
+                        <div>
+                            <div class="note-inner vietqr">
+                                <div class="note">Mẹo: Nếu quét mã</div><br>
+                                <div class="note">này, bạn sẽ không cần</div><br>
+                                <div class="note">nhập bất kì thông tin</div><br>
+                                <div class="note">nào cả.</div>
+                            </div>
+                        </div>
+                    </div>
                 </li>
-            </ul>
-            <img class="qr-image" id="qr-image" src="img/qr.svg" alt="qr image">
-            <ul class="qr-info info-temp_hao">
-                <li>Dùng bất kỳ app ngân hàng quét mã QR này, ae sẽ không cần nhập thủ công các thông tin ở bên trên
-                    </table>
-                </li>
-                <li>Vui lòng để nội dung CK đúng theo hướng dẫn</li>
-                <li>Đây không phải mã VNPAY</li>
             </ul>
         </section>
     </div>
     <script src="./app.js"></script>
 </body>
-
 </html>

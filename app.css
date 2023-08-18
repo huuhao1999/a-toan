@@ -56,7 +56,7 @@ select {
   font: inherit;
 }
 .container-parent{
-  max-width: 450px;
+  max-width: 500px;
   margin: 0 auto;
 }
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
@@ -77,7 +77,7 @@ select {
 body {
   min-height: 100vh;
   padding: 0 0.5em;
-  background-color: #fade70;
+  /* background-color: #fade70; */
   max-width: 40em;
   margin: auto auto;
 }
@@ -106,10 +106,24 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
+.note {
+  display:inline;
+  background: #F5BF59;
+position: relative;
 
+box-shadow: 0 0 0 5px #F5BF59;
+line-height: 1.7rem;
+padding: 0 5px;
+border-radius: 2px
+}
 .logo {
-  width: 95%;
+  /* width: 95%; */
+  max-width: 100px;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .brand {
@@ -118,8 +132,8 @@ ul {
 
 .field {
   display: flex;
-  margin-top: 0.5em;
-  text-align: center;
+  margin-bottom: 0.5em;
+  /* text-align: center; */
 }
 
 .qr-form {
@@ -128,7 +142,7 @@ ul {
 
 .field__label {
   font-family: Cabin;
-  font-size: 1.775rem;
+  font-size: 1.7em;
 
   /* text-align: right;  */
 }
@@ -142,12 +156,12 @@ ul {
   border: 0;
   outline: 0;
   background-color: transparent;
-  font-size: 1.775rem;
+  font-size: 1.7em;
   font-family: Baloo;
   /* text-align: center; */
 }
 .field__control1 {
-  width: 44%;
+  /* width: 44%; */
  border: 0;
  outline: 0;
  background-color: transparent;
@@ -165,7 +179,8 @@ ul {
 }
 
 .banks {
-  padding: 0em 0em 0em 1.6em;
+  /* padding: 0em 0em 0em 1.6em; */
+  padding: 0 0 2em 0;
   font-family: Baloo;
   
   font-size: 32px;
@@ -176,7 +191,9 @@ ul {
   font-size: 32px;
   
 }
-
+.banks ul {
+  list-style: none;
+}
 .banks li {
   word-spacing: 10px;
   margin-top: 0.9em;
@@ -184,17 +201,46 @@ ul {
 
 .banks li > div {
   display: flex;
+  justify-content: space-between;
 }
 
 .banks .bank-name {
-  width: 40%;
-  padding-right: 1em;
+  /* width: 40%; */
+  /* padding-right: 1em; */
 }
 
 .banks .bank-number {
-  width: 60%;
+  /* width: 60%; */
+}
+.banks li .note-inner {
+  margin-top: 20px;
+  display: block;
+  text-align: center;
+  font-size: 0.6em;
+  word-spacing: 0.1em;
+}
+.banks li .note-inner.vietqr {
+  font-size: 0.7em;
+  word-spacing: 0.1em;
 }
 
+@media screen and (max-width: 445px) {
+  .logo{
+    max-width: 4em;
+  }
+  .banks li .note-inner{
+    font-size: 0.5em;
+  }
+  .banks li .note-inner.vietqr {
+    font-size: 0.6em;
+  }
+  .qr-form {
+    padding: 0;
+  }
+  .field__control, .field__label, .field__control1 {
+    font-size: 1.6em;
+  }
+}
 .qr {
   display: grid;
   grid-template: "brand info" auto "image info" auto / 1fr 2fr;
@@ -272,6 +318,20 @@ ul {
 #input-transfer-amount-label{
   margin-left: 20px;
 }
+
+
+#input-transfer-amount::-webkit-outer-spin-button,
+#input-transfer-amount::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+#input-transfer-amount[type=number] {
+  -moz-appearance: textfield;
+}
+
+
 @media screen and (max-width: 330px) {
   .banks, .banks1 {
     font-size: 20px;
